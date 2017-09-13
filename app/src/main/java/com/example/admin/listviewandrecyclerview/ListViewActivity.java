@@ -17,11 +17,11 @@ public class ListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
 
-        lvSimple = (ListView) findViewById(R.id.lvSimple);
+  //      lvSimple = (ListView) findViewById(R.id.lvSimple);
         lvCustom = (ListView) findViewById(R.id.lvCustom);
-        lvCustomVH = (ListView) findViewById(R.id.lvCustomVH);
+   //     lvCustomVH = (ListView) findViewById(R.id.lvCustomVH);
 
-        List<String> personList = new ArrayList<>();
+    /*    List<String> personList = new ArrayList<>();
         personList.add("Jhon Doe");
         personList.add("Jhon Doe1");
         personList.add("Jhon Doe2");
@@ -29,5 +29,18 @@ public class ListViewActivity extends AppCompatActivity {
 
         ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, personList);
         lvSimple.setAdapter(arrayAdapter);
+*/
+
+        List<Person> personListCustom = new ArrayList<>();
+        personListCustom.add(new Person("Bill Clinton", 65, "Male", 167));
+        personListCustom.add(new Person("Tom Cruise", 50, "Male", 167));
+        personListCustom.add(new Person("Jennifer Aninston", 40, "Female", 167));
+
+        CustomListAdapter customListAdapter = new CustomListAdapter(this, R.layout.custom_listview_item, personListCustom);
+        lvCustom.setAdapter(customListAdapter);
+
+  //      CustomVHListAdapter customVHListAdapter = new CustomVHListAdapter(this, R.layout.custom_listview_item, personListCustom);
+  //      lvCustomVH.setAdapter(customVHListAdapter);
+
     }
 }

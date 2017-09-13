@@ -16,7 +16,7 @@
     <ListView
         android:id="@+id/lvSimple"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="wrap_content"></ListView>
 
 
 
@@ -28,7 +28,7 @@
     <ListView
         android:id="@+id/lvCustom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="wrap_content"></ListView>
 
     <TextView
         android:text="Simple list view"
@@ -38,7 +38,7 @@
     <ListView
         android:id="@+id/lvCustomVH"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="wrap_content"></ListView>
 
 
 </LinearLayout>
